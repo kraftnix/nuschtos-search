@@ -45,7 +45,7 @@ rec {
       '');
 
   # also update README examples
-  mkMultiSearch = pkgs.callPackage ({ scopes, baseHref ? "/", title ? "NüschtOS Search", runCommand, xorg }:
+  mkMultiSearch = pkgs.callPackage ({ scopes, baseHref ? "/", title ? "NüschtOS Search", nuscht-search ? nuscht-search, runCommand, xorg }:
     runCommand "nuscht-search" {
       nativeBuildInputs = [ xorg.lndir ];
     } ''
